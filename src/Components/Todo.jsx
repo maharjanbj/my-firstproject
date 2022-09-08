@@ -15,14 +15,14 @@ const Todo = () => {
   console.log(todos);
 
   // Local Storage Setup
-  const getLocalTodos = () => {
-    if(localStorage.getItem('todos') == null) {
-      localStorage.setItem('todos', JSON.stringify([]));
-    }else{
-      let todoLocal = JSON.parse(localStorage.getItem('todos'));
-      setTodos(todoLocal);
-    }
-  }
+  // const getLocalTodos = () => {
+  //   if(localStorage.getItem('todos') == null) {
+  //     localStorage.setItem('todos', JSON.stringify([]));
+  //   }else{
+  //     let todoLocal = JSON.parse(localStorage.getItem('todos'));
+  //     setTodos(todoLocal);
+  //   }
+  // }
 
   //set item to localstorage
   const saveLocalTodos = (todo) => {
@@ -39,6 +39,7 @@ const Todo = () => {
   // Create: Add new todo
   function handleSubmit() {
     setTodos([...todos, input]);
+    saveLocalTodos(input)
     setInput('')
   }
 
