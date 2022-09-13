@@ -1,11 +1,13 @@
-import "./App.css";
-import Todo from "./Components/Todo";
+import './App.css';
+import TodoFirebase from './Components/TodoFirebase'
 
 function App() {
   return (
     <div className="App">
-     <Todo/>
+      {/* <Todo /> */}
+      <TodoFirebase />
     </div>
   );
 }
+
 export default App;
